@@ -4,7 +4,9 @@
   "description": "Zeit productivity helper",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "run-p install:api install:web",
+    "install:api": "cd api && npm install",
+    "install:web": "cd web && npm install"
   },
   "license": "MIT",
   "dependencies": {},
