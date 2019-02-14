@@ -5,7 +5,7 @@ npm-debug.log*
 
 # Dependency directories
 node_modules/
-jspm_packages/
+**/node_modules/
 
 # npm cache directory
 .npm
