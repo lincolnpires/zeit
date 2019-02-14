@@ -6,7 +6,14 @@
   "scripts": {
     "postinstall": "run-p install:api install:web",
     "install:api": "cd api && npm install",
-    "install:web": "cd web && npm install"
+    "install:web": "cd web && npm install",
+    "start": "run-p start:web",
+    "start:web": "npm run start --prefix web",
+
+    "clean": "run-p clean:*",
+    "clean:root": "rm -rf node_modules",
+    "clean:api": "rm -rf api/node_modules",
+    "clean:web": "rm -rf web/node_modules"
   },
   "license": "MIT",
   "dependencies": {},
